@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos SQL y NoSQL</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Bases de Datos SQL y NoSQL</h1>
+    </header>
+    <main class="container mt-5">
+        <section class="mb-5">
+            <h2>Bases de Datos SQL</h2>
+            <p>Las bases de datos SQL (Structured Query Language) son bases de datos relacionales que utilizan un
+                lenguaje de consulta estructurado (SQL) para definir, manipular y consultar los datos.</p>
+            <h3>Características</h3>
+            <ul>
+                <li><strong>Estructura Relacional:</strong> Los datos se organizan en tablas con filas y columnas.</li>
+                <li><strong>Esquema Fijo:</strong> El esquema debe definirse antes de almacenar datos.</li>
+                <li><strong>Lenguaje SQL:</strong> Utilizan SQL para realizar operaciones CRUD y consultas complejas.
+                </li>
+                <li><strong>Transacciones ACID:</strong> Garantizan la integridad y consistencia de los datos.</li>
+                <li><strong>Integridad Referencial:</strong> Mantienen relaciones entre tablas a través de claves
+                    primarias y foráneas.</li>
+            </ul>
+            <h3>Ejemplos</h3>
+            <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>Microsoft SQL Server</li>
+                <li>Oracle Database</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>Bases de Datos NoSQL</h2>
+            <p>Las bases de datos NoSQL (Not Only SQL) son bases de datos no relacionales diseñadas para manejar grandes
+                volúmenes de datos, datos no estructurados y escalabilidad horizontal.</p>
+            <h3>Características</h3>
+            <ul>
+                <li><strong>No Relacional:</strong> No utilizan un esquema fijo y pueden almacenar datos en formatos
+                    flexibles.</li>
+                <li><strong>Escalabilidad Horizontal:</strong> Diseñadas para escalar distribuyendo datos en múltiples
+                    servidores.</li>
+                <li><strong>Modelos de Datos Diversos:</strong> Pueden ser de diferentes tipos: documentos, clave-valor,
+                    columnas y grafos.</li>
+                <li><strong>Alta Disponibilidad:</strong> Optimizadas para la disponibilidad y la partición tolerante.
+                </li>
+                <li><strong>Sin SQL:</strong> Pueden usar diferentes lenguajes de consulta o APIs específicas del
+                    proveedor.</li>
+            </ul>
+            <h3>Tipos y Ejemplos</h3>
+            <ul>
+                <li><strong>Documentales:</strong> MongoDB, CouchDB</li>
+                <li><strong>Clave-Valor:</strong> Redis, DynamoDB</li>
+                <li><strong>Columnas:</strong> Cassandra, HBase</li>
+                <li><strong>Grafos:</strong> Neo4j, JanusGraph</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>Comparación SQL vs NoSQL</h2>
+            <div class="table-container">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Característica</th>
+                            <th>SQL</th>
+                            <th>NoSQL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modelo de Datos</td>
+                            <td>Relacional (tablas)</td>
+                            <td>No relacional (documentos, clave-valor, columnas, grafos)</td>
+                        </tr>
+                        <tr>
+                            <td>Esquema</td>
+                            <td>Fijo, predefinido</td>
+                            <td>Flexible, dinámico</td>
+                        </tr>
+                        <tr>
+                            <td>Lenguaje de Consulta</td>
+                            <td>SQL</td>
+                            <td>APIs, lenguajes específicos del proveedor</td>
+                        </tr>
+                        <tr>
+                            <td>Transacciones</td>
+                            <td>ACID (consistencia fuerte)</td>
+                            <td>Eventual (en algunos casos)</td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidad</td>
+                            <td>Vertical</td>
+                            <td>Horizontal</td>
+                        </tr>
+                        <tr>
+                            <td>Casos de Uso</td>
+                            <td>Aplicaciones empresariales, ERP, CRM</td>
+                            <td>Big Data, aplicaciones en tiempo real, redes sociales</td>
+                        </tr>
+                        <tr>
+                            <td>Ejemplos de Bases de Datos</td>
+                            <td>MySQL, PostgreSQL, SQLite, SQL Server, Oracle</td>
+                            <td>MongoDB, Redis, Cassandra, Neo4j, DynamoDB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Temario Aside -->
+        <aside class="temario-aside">
+            <h3 class="temario-title text-center">Temario</h3>
+            <div class="list-group">
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+                <div class="collapse" id="collapseHTML">
+                    <div class="list-group">
+                        <a href="/HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                        <a href="/HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML
+                            semántico</a>
+                        <a href="/HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de
+                            desarrollo</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+                <div class="collapse" id="collapseCSS">
+                    <div class="list-group">
+                        <a href="/HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1.
+                            Selectores CSS</a>
+                        <a href="/HTML/variablescss.html" class="list-group-item list-group-item-action">2.2.
+                            Variables</a>
+                        <a href="/HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3.
+                    Bootstrap</button>
+                <div class="collapse" id="collapseBootstrap">
+                    <div class="list-group">
+                        <a href="/HTML/BootstrapImplementar.html" class="list-group-item list-group-item-action">3.1.
+                            Como implementarlo</a>
+                        <a href="/HTML/containers.html" class="list-group-item list-group-item-action">3.2.
+                            Containers</a>
+                        <a href="/HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema de
+                            Grid</a>
+                        <a href="/HTML/componentes.html" class="list-group-item list-group-item-action">3.4.
+                            Componentes</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+                <div class="collapse" id="collapseJS">
+                    <div class="list-group">
+                        <a href="/HTML/codigodelcliente.html" class="list-group-item list-group-item-action">4.1. Código
+                            lado del cliente y servidor</a>
+                        <a href="/HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2. Como
+                            usar JavaScript</a>
+                        <a href="/HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3.
+                            Variables</a>
+                        <a href="/HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos de
+                            datos</a>
+                        <a href="/HTML/mathjs.html" class="list-group-item list-group-item-action">4.5. Operaciones
+                            matemáticas</a>
+                        <a href="/HTML/condicionalesjs.html" class="list-group-item list-group-item-action">4.6.
+                            Condicionales</a>
+                        <a href="/HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7.
+                            Funciones</a>
+                        <a href="/HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                        <a href="/HTML/manipulaciondom.html" class="list-group-item list-group-item-action">4.9.
+                            Manipulación de DOM</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5.
+                    jQuery</button>
+                <div class="collapse" id="collapsejQuery">
+                    <div class="list-group">
+                        <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1.
+                            Filosofía de jQuery</a>
+                        <a href="/HTML/selectoresjquery.html" class="list-group-item list-group-item-action">5.2.
+                            Selectores</a>
+                        <a href="/HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3. Atributos
+                            y clases</a>
+                        <a href="/HTML/traversing.html" class="list-group-item list-group-item-action">5.4.
+                            Traversing</a>
+                        <a href="/HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5. Manejo de
+                            eventos</a>
+                        <a href="/HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+                <div class="collapse" id="collapseGIT">
+                    <div class="list-group">
+                        <a href="/HTML/" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                        <a href="/HTML/caracteristicasgit.html" class="list-group-item list-group-item-action">6.2.
+                            Características</a>
+                        <a href="/HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3.
+                            Ventajas</a>
+                        <a href="/HTML/gitazure.html" class="list-group-item list-group-item-action">6.4. GitHub / Azure
+                            Repos</a>
+                        <a href="/HTML/terminologiagit.html" class="list-group-item list-group-item-action">6.5.
+                            Terminología</a>
+                        <a href="/HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6.
+                            Comandos</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+                <div class="collapse" id="collapseSQL">
+                    <div class="list-group">
+                        <a href="/HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1. Bases de
+                            datos SQL y no SQL</a>
+                        <a href="/HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                        <a href="/HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                        <a href="/HTML/relaciones.html" class="list-group-item list-group-item-action">7.4. Relaciones
+                            1-1, 1-n, n-n</a>
+                        <a href="/HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK, Identity,
+                            restricciones</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+                <div class="collapse" id="collapseNET">
+                    <div class="list-group">
+                        <a href="/HTML/generarproyectonet.html" class="list-group-item list-group-item-action">8.1.
+                            Generar un proyecto de Página web</a>
+                        <a href="/HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2.
+                            Estructura de un proyecto de .NET Core</a>
+                        <a href="/HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                        <a href="/HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                        <a href="/HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5.
+                            Migraciones</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

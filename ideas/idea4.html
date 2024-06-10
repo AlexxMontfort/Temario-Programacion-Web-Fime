@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones del Estudiante</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Calificaciones del Estudiante</h1>
+        
+        <p class="mb-4">
+            Propuesta idea 4: Estaría padre poder ver nuestras calificaciones directamente como en el Excel que mostró al final del curso, para saber qué pedo, poder saber cuántas tareas nos quedan para recuperarnos, para no confiarnos saber si vamos mal. Esta propuesta está y la página está hecha ya en SIASE pero no se usa.
+        </p>
+
+        <div class="table-container">
+            <h2 class="mb-4">Resumen de Calificaciones</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Calificación</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tarea 1</td>
+                        <td>85</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 2</td>
+                        <td>70</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 3</td>
+                        <td>50</td>
+                        <td>Reprobado</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 4</td>
+                        <td>90</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 5</td>
+                        <td>65</td>
+                        <td>En riesgo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+            ¡Atención! Necesitas mejorar tus calificaciones en las próximas tareas para recuperar tu promedio.
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-title">Progreso General</div>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

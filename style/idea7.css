@@ -1,0 +1,57 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.book {
+    background-color: #fff;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.page {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.left {
+    border-right: 1px solid #ddd;
+}
+
+.right {
+    border-left: 1px solid #ddd;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+p {
+    text-align: justify;
+    color: #555;
+    font-size: 1rem;
+}

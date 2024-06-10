@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de jQuery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Selectores de jQuery</h1>
+    </header>
+    <main class="container mt-5">
+        <section class="mb-5">
+            <h2>Introducción a los Selectores de jQuery</h2>
+            <p>jQuery proporciona una manera fácil y eficiente de seleccionar y manipular elementos del DOM. Los selectores de jQuery permiten encontrar elementos basados en sus etiquetas, clases, IDs, atributos, y más.</p>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Etiqueta</h3>
+            <p>Selecciona todos los elementos de un tipo específico de etiqueta. Utiliza el nombre de la etiqueta como selector.</p>
+            <div class="code-block">
+                <pre><code>$("etiqueta")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar todos los párrafos <code>&lt;p&gt;</code>.</p>
+            <div class="code-block">
+                <pre><code>$("p") // Selecciona todos los párrafos</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Clase</h3>
+            <p>Selecciona todos los elementos con una clase específica. Utiliza un punto <code>.</code> seguido del nombre de la clase.</p>
+            <div class="code-block">
+                <pre><code>$(".clase")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar todos los elementos con la clase <code>miClase</code>.</p>
+            <div class="code-block">
+                <pre><code>$(".miClase") // Selecciona todos los elementos con la clase "miClase"</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de ID</h3>
+            <p>Selecciona un elemento con un ID específico. Utiliza una almohadilla <code>#</code> seguida del valor del ID.</p>
+            <div class="code-block">
+                <pre><code>$("#id")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar el elemento con el ID <code>miId</code>.</p>
+            <div class="code-block">
+                <pre><code>$("#miId") // Selecciona el elemento con el ID "miId"</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Atributo</h3>
+            <p>Selecciona todos los elementos con un atributo específico. Utiliza corchetes <code>[]</code> alrededor del nombre del atributo.</p>
+            <div class="code-block">
+                <pre><code>$("[atributo]")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar todos los elementos con el atributo <code>href</code>.</p>
+            <div class="code-block">
+                <pre><code>$("[href]") // Selecciona todos los elementos con el atributo "href"</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Pseudo-clase</h3>
+            <p>Selecciona elementos basados en su estado o posición en el DOM. Utiliza dos puntos <code>:</code> seguido del nombre de la pseudo-clase.</p>
+            <div class="code-block">
+                <pre><code>$("selector:pseudo-clase")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar el primer párrafo.</p>
+            <div class="code-block">
+                <pre><code>$("p:first") // Selecciona el primer párrafo</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Descendiente</h3>
+            <p>Selecciona todos los elementos descendientes de un elemento específico. Utiliza un espacio entre los selectores.</p>
+            <div class="code-block">
+                <pre><code>$("ancestro descendiente")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar todos los párrafos dentro de divs.</p>
+            <div class="code-block">
+                <pre><code>$("div p") // Selecciona todos los párrafos dentro de divs</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Hijo</h3>
+            <p>Selecciona todos los elementos que son hijos directos de un elemento específico. Utiliza el signo mayor que <code>&gt;</code> entre los selectores.</p>
+            <div class="code-block">
+                <pre><code>$("padre &gt; hijo")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar todos los párrafos que son hijos directos de divs.</p>
+            <div class="code-block">
+                <pre><code>$("div &gt; p") // Selecciona todos los párrafos que son hijos directos de divs</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Selector de Hermano</h3>
+            <p>Selecciona los elementos hermanos de un elemento específico. Utiliza el signo más <code>+</code> para seleccionar el hermano inmediato o la tilde <code>~</code> para seleccionar todos los hermanos.</p>
+            <div class="code-block">
+                <pre><code>$("elemento + hermano")</code></pre>
+            </div>
+            <p><strong>Ejemplo:</strong> Seleccionar el párrafo que sigue inmediatamente a un h2.</p>
+            <div class="code-block">
+                <pre><code>$("h2 + p") // Selecciona el párrafo que sigue inmediatamente a un h2</code></pre>
+            </div>
+        </section>
+                       <!-- Temario Aside -->
+    <aside class="temario-aside">
+        <h3 class="temario-title text-center">Temario</h3>
+        <div class="list-group">
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+            <div class="collapse" id="collapseHTML">
+                <div class="list-group">
+                    <a href="/HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                    <a href="/HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML semántico</a>
+                    <a href="/HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de desarrollo</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+            <div class="collapse" id="collapseCSS">
+                <div class="list-group">
+                    <a href="/HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1. Selectores CSS</a>
+                    <a href="/HTML/variablescss.html" class="list-group-item list-group-item-action">2.2. Variables</a>
+                    <a href="/HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3. Bootstrap</button>
+            <div class="collapse" id="collapseBootstrap">
+                <div class="list-group">
+                    <a href="/HTML/BootstrapImplementar.html" class="list-group-item list-group-item-action">3.1. Como implementarlo</a>
+                    <a href="/HTML/containers.html" class="list-group-item list-group-item-action">3.2. Containers</a>
+                    <a href="/HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema de Grid</a>
+                    <a href="/HTML/componentes.html" class="list-group-item list-group-item-action">3.4. Componentes</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+            <div class="collapse" id="collapseJS">
+                <div class="list-group">
+                    <a href="/HTML/codigodelcliente.html" class="list-group-item list-group-item-action">4.1. Código lado del cliente y servidor</a>
+                    <a href="/HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2. Como usar JavaScript</a>
+                    <a href="/HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3. Variables</a>
+                    <a href="/HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos de datos</a>
+                    <a href="/HTML/mathjs.html" class="list-group-item list-group-item-action">4.5. Operaciones matemáticas</a>
+                    <a href="/HTML/condicionalesjs.html" class="list-group-item list-group-item-action">4.6. Condicionales</a>
+                    <a href="/HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7. Funciones</a>
+                    <a href="/HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                    <a href="/HTML/manipulaciondom.html" class="list-group-item list-group-item-action">4.9. Manipulación de DOM</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5. jQuery</button>
+            <div class="collapse" id="collapsejQuery">
+                <div class="list-group">
+                    <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1. Filosofía de jQuery</a>
+                    <a href="/HTML/selectoresjquery.html" class="list-group-item list-group-item-action">5.2. Selectores</a>
+                    <a href="/HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3. Atributos y clases</a>
+                    <a href="/HTML/traversing.html" class="list-group-item list-group-item-action">5.4. Traversing</a>
+                    <a href="/HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5. Manejo de eventos</a>
+                    <a href="/HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+            <div class="collapse" id="collapseGIT">
+                <div class="list-group">
+                    <a href="/HTML/" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                    <a href="/HTML/caracteristicasgit.html" class="list-group-item list-group-item-action">6.2. Características</a>
+                    <a href="/HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3. Ventajas</a>
+                    <a href="/HTML/gitazure.html" class="list-group-item list-group-item-action">6.4. GitHub / Azure Repos</a>
+                    <a href="/HTML/terminologiagit.html" class="list-group-item list-group-item-action">6.5. Terminología</a>
+                    <a href="/HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6. Comandos</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+            <div class="collapse" id="collapseSQL">
+                <div class="list-group">
+                    <a href="/HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1. Bases de datos SQL y no SQL</a>
+                    <a href="/HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                    <a href="/HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                    <a href="/HTML/relaciones.html" class="list-group-item list-group-item-action">7.4. Relaciones 1-1, 1-n, n-n</a>
+                    <a href="/HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK, Identity, restricciones</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+            <div class="collapse" id="collapseNET">
+                <div class="list-group">
+                    <a href="/HTML/generarproyectonet.html" class="list-group-item list-group-item-action">8.1. Generar un proyecto de Página web</a>
+                    <a href="/HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2. Estructura de un proyecto de .NET Core</a>
+                    <a href="/HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                    <a href="/HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                    <a href="/HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5. Migraciones</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </main>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

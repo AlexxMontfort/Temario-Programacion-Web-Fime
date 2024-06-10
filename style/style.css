@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Manual Content Styles */
+.manual-content .manual-section {
+    margin-bottom: 2rem;
+}
+
+.manual-title {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    margin-bottom: 2rem;
+}
+
+.faq-title {
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #17a2b8;
+}
+
+.faq-item h5 {
+    margin-top: 1rem;
+}
+
+/* Code Block Styles */
+.code {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Temario Aside Styles */
+.temario-aside {
+    position: fixed;
+    left: 0;
+    top: 60px; /* Adjust based on your navbar height */
+    width: 300px;
+    height: calc(100% - 60px); /* Adjust based on your navbar height */
+    overflow-y: auto;
+    background-color: rgb(248, 245, 245);
+    padding: 10px;
+    border-left: 1px solid #dee2e6;
+}
+
+.temario-title {
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    cursor: pointer;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Collapse Transition */
+.collapse {
+    transition: height 0.3s ease;
+}
+
+/* Ideas Button and List */
+#collapseIdeas .list-group-item {
+    text-align: left;
+}
+
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.collapse.mt-3 {
+    margin-top: 20px;
+}

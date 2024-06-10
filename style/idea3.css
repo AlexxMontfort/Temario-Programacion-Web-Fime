@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid black; /* Margen negro delgado */
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.circle h2 {
+    margin: 0;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Color schemes */
+.html {
+    background-color: #e34c26;
+}
+
+.css {
+    background-color: #2965f1;
+}
+
+.javascript {
+    background-color: #f0db4f;
+    color: #323330;
+}
+
+.bootstrap {
+    background-color: #563d7c;
+}
+
+.sql-server {
+    background-color: #a91d22;
+}
+
+.jquery {
+    background-color: #0769ad;
+}
+
+.git {
+    background-color: #f34f29;
+}
+
+.net-core {
+    background-color: #5c2d91;
+}

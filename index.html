@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .faq-title {
+            color: #6c757d;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .temario-aside {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            /* Adjust based on your navbar height */
+            width: 300px;
+            height: calc(100% - 60px);
+            /* Adjust based on your navbar height */
+            overflow-y: auto;
+            background-color: rgb(248, 245, 245);
+            padding: 10px;
+            border-left: 1px solid #dee2e6;
+        }
+
+        .temario-title {
+            color: #6c757d;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .code {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .row>div {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .manual-content .manual-section {
+            margin-bottom: 2rem;
+        }
+
+        .manual-title {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .faq-section {
+            margin-bottom: 2rem;
+        }
+
+        .faq-title {
+            font-size: 1.25rem;
+            color: #17a2b8;
+        }
+
+        .faq-item h5 {
+            margin-top: 1rem;
+        }
+
+        .temario-aside {
+            margin-top: 2rem;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.25rem;
+        }
+
+        .temario-title {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: #28a745;
+        }
+
+        .section-title {
+            cursor: pointer;
+        }
+
+        .collapse {
+            transition: height 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 manual-content">
+        <h1 class="mb-4">Manual de Supervivencia para la Clase de Programación Web con el Ingeniero Luis Daniel Lepe
+        </h1>
+
+        <!-- Manual Sections -->
+        <div class="manual-section">
+            <h2 class="manual-title">1. Buena Onda pero Estricto</h2>
+            <p>El ingeniero Luis Daniel Lepe es súper buena onda a la hora de enseñar, pero cuando califica es muy duro.
+                No esperes que te ayude mucho aunque le cuentes los mejores chistes del semestre 😿.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">2. Resúmenes de Clase</h2>
+            <p>Casi todas las clases encarga hacer un resumen en formato de página web con HTML, CSS y a veces
+                JavaScript. Estos resúmenes son para puntos extra. Los revisa y da retroalimentación, y si lo haces
+                exageradamente bien, puede darte hasta 15 puntos. A mí me pasó, pero aún así no pasé porque hice solo 4
+                de los 6 resúmenes. ¡Haz los resúmenes sí o sí!</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">3. Empieza Tranquilo pero Prepárate</h2>
+            <p>El curso empieza muy tranquilo con temas de HTML, CSS, JavaScript, Bootstrap, etc. Estas cosas pueden ser
+                tediosas pero se aprenden rápido. Te aconsejo que empieces a estudiar JavaScript por tu cuenta, que
+                aprendas qué son los queries y las bases de datos. La mayoría reprobó después del examen de medio curso
+                por estos temas.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">4. Sé Autodidacta</h2>
+            <p>En las clases se ve todo lo necesario para hacer tu PIA, pero cada tarea y parte del proyecto es más
+                difícil que lo visto en clase. No te quedes solo con lo que se da en clase, investiga y aprende por tu
+                cuenta.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">5. No Prometas de Más en la Fase 1</h2>
+            <p>No te pases prometiendo funcionalidades en la Fase 1 de tu proyecto. Lo que le prometas al profe es lo
+                que tendrás que cumplir en la Fase 3. Mejor promete menos y cumple con calidad.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">6. Trabajo en Equipo</h2>
+            <p>Lleva bitácoras para dividir el trabajo con tus compañeros. Tendrán que trabajar mucho en el PIA y es
+                importante dividir el trabajo según lo que le gusta a cada quien y de forma justa.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 class="manual-title">7. Aprende a Usar Git</h2>
+            <p>Aprende a hacer ramas en Git. Cada quien debe tener su rama para trabajar y luego pasarla a la rama
+                principal sin afectar a los demás. Esto facilita la colaboración y el control de versiones en el
+                proyecto.</p>
+        </div>
+    </div>
+
+    <!-- Preguntas Frecuentes -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Preguntas Frecuentes</h1>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 class="faq-title">1. HTML</h2>
+            <div class="faq-item">
+                <h5>1.1 ¿Qué es HTML?</h5>
+                <p>HTML es el lenguaje de marcado utilizado para estructurar el contenido de las páginas web.</p>
+            </div>
+            <div class="faq-item">
+                <h5>1.2 ¿Qué son las etiquetas HTML?</h5>
+                <p>Las etiquetas HTML son elementos que definen la estructura y el contenido de una página web.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">2. CSS</h2>
+            <div class="faq-item">
+                <h5>2.1 ¿Qué es CSS?</h5>
+                <p>CSS es un lenguaje de estilo utilizado para controlar la apariencia y el diseño de las páginas web.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h5>2.2 ¿Qué son los selectores CSS?</h5>
+                <p>Los selectores CSS se utilizan para seleccionar y aplicar estilos a elementos HTML específicos.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">3. JavaScript</h2>
+            <div class="faq-item">
+                <h5>3.1 ¿Qué es JavaScript?</h5>
+                <p>JavaScript es un lenguaje de programación utilizado para crear contenido dinámico en las páginas web.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h5>3.2 ¿Cómo se usa JavaScript en una página web?</h5>
+                <p>JavaScript se puede incluir en una página web dentro de etiquetas <code>&lt;script&gt;</code> o
+                    enlazando archivos externos .js.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">4. jQuery</h2>
+            <div class="faq-item">
+                <h5>4.1 ¿Qué es jQuery?</h5>
+                <p>jQuery es una biblioteca de JavaScript que simplifica la manipulación del DOM y la gestión de
+                    eventos.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">5. GIT</h2>
+            <div class="faq-item">
+                <h5>5.1 ¿Qué es Git?</h5>
+                <p>Git es un sistema de control de versiones distribuido que permite a los desarrolladores gestionar y
+                    rastrear los cambios en su código.</p>
+            </div>
+            <div class="faq-item">
+                <h5>5.2 ¿Cuáles son los comandos básicos de Git?</h5>
+                <p>Los comandos básicos de Git incluyen <code>git init</code>, <code>git clone</code>,
+                    <code>git add</code>, <code>git commit</code>, <code>git push</code>, y <code>git pull</code>.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">6. SQL Server</h5>
+                <div class="faq-item">
+                    <h5>6.1 ¿Qué es SQL?</h5>
+                    <p>SQL es un lenguaje de consulta utilizado para gestionar y manipular bases de datos relacionales.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>6.2 ¿Qué es una base de datos relacional?</h5>
+                    <p>Una base de datos relacional es una base de datos estructurada que organiza los datos en tablas
+                        relacionadas entre sí mediante claves.</p>
+                </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">7. .NET Core</h5>
+                <div class="faq-item">
+                    <h5>7.1 ¿Qué es .NET Core?</h5>
+                    <p>.NET Core es un framework de desarrollo de código abierto y multiplataforma utilizado para crear
+                        aplicaciones modernas y escalables.</p>
+                </div>
+                <div class="faq-item">
+                    <h5>7.2 ¿Qué es el patrón MVC en .NET Core?</h5>
+                    <p>El patrón MVC (Modelo-Vista-Controlador) es un patrón de diseño que separa la lógica de la
+                        aplicación en tres componentes: Modelo (datos), Vista (interfaz de usuario) y Controlador
+                        (manejo de solicitudes).</p>
+                </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">8. Más Preguntas</h2>
+            <div class="faq-item">
+                <h5>8.1 ¿Qué es HTML semántico?</h5>
+                <p>HTML semántico utiliza etiquetas que describen el propósito del contenido, mejorando la accesibilidad
+                    y el SEO.</p>
+            </div>
+            <div class="faq-item">
+                <h5>8.2 ¿Qué son las variables CSS?</h5>
+                <p>Las variables CSS permiten almacenar valores que se pueden reutilizar en todo el documento CSS,
+                    facilitando la gestión de los estilos.</p>
+            </div>
+            <div class="faq-item">
+                <h5>8.3 ¿Qué es el modelo de caja de CSS?</h5>
+                <p>El modelo de caja de CSS es un concepto que describe el diseño y el espacio alrededor de los
+                    elementos HTML, incluyendo el margen, el borde, el relleno y el contenido.</p>
+            </div>
+            <div class="faq-item">
+                <h5>8.4 ¿Qué es AJAX en jQuery?</h5>
+                <p>AJAX en jQuery permite realizar peticiones asincrónicas para actualizar el contenido de una página
+                    sin recargarla, utilizando métodos como <code>$.ajax()</code>, <code>$.get()</code> y
+                    <code>$.post()</code>.</p>
+            </div>
+            <div class="faq-item">
+                <h5>8.5 ¿Qué son las migraciones en .NET Core?</h5>
+                <p>Las migraciones en .NET Core permiten gestionar cambios en el esquema de la base de datos de forma
+                    incremental, asegurando que esté sincronizada con el modelo de datos de la aplicación.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista Desplegable de Ideas -->
+                <section>
+                    <div class="container">
+                        <button onclick="window.location.href='../ideas/idea1.html';">IDEA 1</button>
+                        <button onclick="window.location.href='../ideas/idea2.html';">IDEA 2</button>
+                        <button onclick="window.location.href='../ideas/idea3.html';">IDEA 3</button>
+                        <button onclick="window.location.href='../ideas/idea4.html';">IDEA 4</button>
+                        <button onclick="window.location.href='../ideas/idea5.html';">IDEA 5</button>
+                        <button onclick="window.location.href='../ideas/idea6.html';">IDEA 6</button>
+                        <button onclick="window.location.href='../ideas/idea7.html';">IDEA 7</button>
+                        <button onclick="window.location.href='../ideas/idea8.html';">IDEA 8</button>
+                        <button onclick="window.location.href='../ideas/idea9.html';">IDEA 9</button>
+                        <button onclick="window.location.href='../ideas/idea10.html';">IDEA 10</button>
+                        <button onclick="window.location.href='../ideas/idea11.html';">IDEA 11</button>
+
+                    </div>
+                </section>
+
+                <!-- Temario Aside -->
+                <aside class="temario-aside">
+                    <h3 class="temario-title">Temario</h3>
+                    <div class="list-group">
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1.
+                            HTML</button>
+                        <div class="collapse" id="collapseHTML">
+                            <div class="list-group">
+                                <a href="./HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1.
+                                    Etiquetas</a>
+                                <a href="./HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML
+                                    semántico</a>
+                                <a href="./HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de
+                                    desarrollo</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+                        <div class="collapse" id="collapseCSS">
+                            <div class="list-group">
+                                <a href="./HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1.
+                                    Selectores CSS</a>
+                                <a href="./HTML/variablescss.html" class="list-group-item list-group-item-action">2.2.
+                                    Variables</a>
+                                <a href="./HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la
+                                    caja</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3.
+                            Bootstrap</button>
+                        <div class="collapse" id="collapseBootstrap">
+                            <div class="list-group">
+                                <a href="./HTML/BootstrapImplementar.html"
+                                    class="list-group-item list-group-item-action">3.1. Como implementarlo</a>
+                                <a href="./HTML/containers.html" class="list-group-item list-group-item-action">3.2.
+                                    Containers</a>
+                                <a href="./HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema
+                                    de Grid</a>
+                                <a href="./HTML/componentes.html" class="list-group-item list-group-item-action">3.4.
+                                    Componentes</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4.
+                            JavaScript</button>
+                        <div class="collapse" id="collapseJS">
+                            <div class="list-group">
+                                <a href="./HTML/codigodelcliente.html"
+                                    class="list-group-item list-group-item-action">4.1. Código lado del cliente y
+                                    servidor</a>
+                                <a href="./HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2.
+                                    Como usar JavaScript</a>
+                                <a href="./HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3.
+                                    Variables</a>
+                                <a href="./HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos
+                                    de datos</a>
+                                <a href="./HTML/mathjs.html" class="list-group-item list-group-item-action">4.5.
+                                    Operaciones matemáticas</a>
+                                <a href="./HTML/condicionalesjs.html"
+                                    class="list-group-item list-group-item-action">4.6. Condicionales</a>
+                                <a href="./HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7.
+                                    Funciones</a>
+                                <a href="./HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8.
+                                    Bucles</a>
+                                <a href="./HTML/manipulaciondom.html"
+                                    class="list-group-item list-group-item-action">4.9. Manipulación de DOM</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5.
+                            jQuery</button>
+                        <div class="collapse" id="collapsejQuery">
+                            <div class="list-group">
+                                <a href="pagina_jquery.html#filosofia"
+                                    class="list-group-item list-group-item-action">5.1. Filosofía de jQuery</a>
+                                <a href="./HTML/selectoresjquery.html"
+                                    class="list-group-item list-group-item-action">5.2. Selectores</a>
+                                <a href="./HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3.
+                                    Atributos y clases</a>
+                                <a href="./HTML/traversing.html" class="list-group-item list-group-item-action">5.4.
+                                    Traversing</a>
+                                <a href="./HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5.
+                                    Manejo de eventos</a>
+                                <a href="./HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+                        <div class="collapse" id="collapseGIT">
+                            <div class="list-group">
+                                <a href="./HTML/" class="list-group-item list-group-item-action">6.1. Control de
+                                    versiones</a>
+                                <a href="./HTML/caracteristicasgit.html"
+                                    class="list-group-item list-group-item-action">6.2. Características</a>
+                                <a href="./HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3.
+                                    Ventajas</a>
+                                <a href="./HTML/gitazure.html" class="list-group-item list-group-item-action">6.4.
+                                    GitHub / Azure Repos</a>
+                                <a href="./HTML/terminologiagit.html"
+                                    class="list-group-item list-group-item-action">6.5. Terminología</a>
+                                <a href="./HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6.
+                                    Comandos</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL
+                            Server</button>
+                        <div class="collapse" id="collapseSQL">
+                            <div class="list-group">
+                                <a href="./HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1.
+                                    Bases de datos SQL y no SQL</a>
+                                <a href="./HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                                <a href="./HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                                <a href="./HTML/relaciones.html" class="list-group-item list-group-item-action">7.4.
+                                    Relaciones 1-1, 1-n, n-n</a>
+                                <a href="./HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK,
+                                    Identity, restricciones</a>
+                            </div>
+                        </div>
+
+                        <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                            data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET
+                            Core</button>
+                        <div class="collapse" id="collapseNET">
+                            <div class="list-group">
+                                <a href="./HTML/generarproyectonet.html"
+                                    class="list-group-item list-group-item-action">8.1. Generar un proyecto de Página
+                                    web</a>
+                                <a href="./HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2.
+                                    Estructura de un proyecto de .NET Core</a>
+                                <a href="./HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3.
+                                    Layouts</a>
+                                <a href="./HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                                <a href="./HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5.
+                                    Migraciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar un Proyecto de Página Web en .NET LTS</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Generar un Proyecto de Página Web en .NET LTS</h1>
+    </header>
+    <main class="container mt-5">
+        <section class="mb-5">
+            <h2>Requisitos Previos</h2>
+            <ul>
+                <li><strong>Visual Studio</strong>: Asegúrate de tener instalado Visual Studio 2019 o una versión más reciente.</li>
+                <li><strong>SDK de .NET</strong>: Debes tener instalado el SDK de .NET LTS. Puedes descargarlo desde <a href="https://dotnet.microsoft.com/download" target="_blank">la página oficial de .NET</a>.</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>Pasos para Generar un Proyecto de Página Web en .NET LTS</h2>
+            <h3>1. Crear un Nuevo Proyecto en Visual Studio</h3>
+            <p><strong>Abrir Visual Studio</strong>: Inicia Visual Studio desde tu menú de inicio o escritorio.</p>
+            <p><strong>Crear un Nuevo Proyecto</strong>: En la pantalla de inicio de Visual Studio, selecciona "Crear un nuevo proyecto".</p>
+            <p><strong>Seleccionar Plantilla de Proyecto</strong>: En la ventana de "Crear un nuevo proyecto", busca "ASP.NET Core Web Application" y selecciónala. Haz clic en "Siguiente".</p>
+            <p><strong>Configurar el Proyecto</strong>: Asigna un nombre a tu proyecto, elige una ubicación para guardarlo, opcionalmente cambia el nombre de la solución y haz clic en "Crear".</p>
+
+            <h3>2. Seleccionar la Plantilla de Aplicación</h3>
+            <p><strong>Elegir Plantilla</strong>: En la ventana "Crear una nueva aplicación web de ASP.NET Core", selecciona la plantilla "Web Application (Model-View-Controller)" para crear una aplicación MVC. Asegúrate de seleccionar ".NET 6.0 (LTS)" o la versión LTS disponible. Opcionalmente, puedes habilitar HTTPS y configurar la autenticación según tus necesidades. Haz clic en "Crear".</p>
+
+            <h3>3. Explorar la Estructura del Proyecto</h3>
+            <p>Una vez creado el proyecto, Visual Studio generará una estructura de carpetas y archivos predeterminados. Aquí tienes una breve descripción de los elementos más importantes:</p>
+            <ul>
+                <li><strong>Controllers</strong>: Contiene los controladores que manejan las solicitudes HTTP y generan las respuestas.</li>
+                <li><strong>Models</strong>: Contiene las clases de modelo que representan los datos de la aplicación.</li>
+                <li><strong>Views</strong>: Contiene las vistas (HTML, CSS, Razor) que se utilizan para renderizar la interfaz de usuario.</li>
+                <li><strong>wwwroot</strong>: Contiene archivos estáticos como CSS, JavaScript e imágenes.</li>
+                <li><strong>Program.cs</strong>: Punto de entrada principal para configurar y arrancar la aplicación.</li>
+                <li><strong>appsettings.json</strong>: Archivo de configuración de la aplicación.</li>
+            </ul>
+
+            <h3>4. Ejecutar la Aplicación</h3>
+            <p><strong>Configurar el Proyecto</strong>: Asegúrate de que el proyecto seleccionado en el menú desplegable de inicio (al lado del botón "Iniciar") sea el proyecto de tu aplicación.</p>
+            <p><strong>Ejecutar la Aplicación</strong>: Haz clic en el botón "Iniciar" (icono de reproducción) o presiona <code>F5</code> para compilar y ejecutar la aplicación. Esto iniciará el servidor web y abrirá tu aplicación en el navegador predeterminado.</p>
+
+            <h3>5. Modificar y Personalizar la Aplicación</h3>
+            <p>Ahora que tu aplicación básica está en funcionamiento, puedes empezar a modificar y personalizar el código para ajustarlo a tus necesidades:</p>
+            <ul>
+                <li><strong>Agregar Controladores</strong>: Crea nuevos controladores en la carpeta <code>Controllers</code>.</li>
+                <li><strong>Agregar Vistas</strong>: Crea nuevas vistas en la carpeta <code>Views</code>.</li>
+                <li><strong>Agregar Modelos</strong>: Define clases de modelo en la carpeta <code>Models</code> para representar los datos de la aplicación.</li>
+                <li><strong>Configurar Rutas</strong>: Configura las rutas en el archivo <code>Startup.cs</code> o <code>Program.cs</code>.</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>Ejemplo de Código</h2>
+            <h3>Modelo (<code>Models/Producto.cs</code>)</h3>
+            <div class="code-block">
+                <pre><code>namespace MiAplicacion.Models
+{
+    public class Producto
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public decimal Precio { get; set; }
+    }
+}</code></pre>
+            </div>
+
+            <h3>Controlador (<code>Controllers/ProductosController.cs</code>)</h3>
+            <div class="code-block">
+                <pre><code>using Microsoft.AspNetCore.Mvc;
+using MiAplicacion.Models;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace MiAplicacion.Controllers
+{
+    public class ProductosController : Controller
+    {
+        private static List<Producto> productos = new List&lt;Producto&gt;
+        {
+            new Producto { Id = 1, Nombre = "Producto 1", Precio = 10.0m },
+            new Producto { Id = 2, Nombre = "Producto 2", Precio = 20.0m },
+        };
+
+        public IActionResult Index()
+        {
+            return View(productos);
+        }
+
+        public IActionResult Detalles(int id)
+        {
+            var producto = productos.FirstOrDefault(p => p.Id == id);
+            if (producto == null)
+            {
+                return NotFound();
+            }
+            return View(producto);
+        }
+    }
+}</code></pre>
+            </div>
+
+            <h3>Vista de Índice (<code>Views/Productos/Index.cshtml</code>)</h3>
+            <div class="code-block">
+                <pre><code>@model IEnumerable&lt;MiAplicacion.Models.Producto&gt;
+
+@{
+    ViewData["Title"] = "Lista de Productos";
+}
+
+<h2>Lista de Productos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var producto in Model)
+    {
+        <tr>
+            <td>@producto.Id</td>
+            <td>@producto.Nombre</td>
+            <td>@producto.Precio</td>
+            <td>
+                <a href="/Productos/Detalles/@producto.Id" class="btn btn-primary">Detalles</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table></code></pre>
+            </div>
+
+            <h3>Vista de Detalles (<code>Views/Productos/Detalles.cshtml</code>)</h3>
+            <div class="code-block">
+                <pre><code>@model MiAplicacion.Models.Producto
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+<h2>Detalles del Producto</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Id
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Id
+        </dd>
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Precio
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Precio
+        </dd>
+    </dl>
+</div>
+<a href="/Productos" class="btn btn-secondary">Volver a la Lista</a></code></pre>
+            </div>
+        </section>
+        <!-- Temario Aside -->
+    <aside class="temario-aside">
+        <h3 class="temario-title text-center">Temario</h3>
+        <div class="list-group">
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+            <div class="collapse" id="collapseHTML">
+                <div class="list-group">
+                    <a href="/HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                    <a href="/HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML semántico</a>
+                    <a href="/HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de desarrollo</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+            <div class="collapse" id="collapseCSS">
+                <div class="list-group">
+                    <a href="/HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1. Selectores CSS</a>
+                    <a href="/HTML/variablescss.html" class="list-group-item list-group-item-action">2.2. Variables</a>
+                    <a href="/HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3. Bootstrap</button>
+            <div class="collapse" id="collapseBootstrap">
+                <div class="list-group">
+                    <a href="/HTML/BootstrapImplementar.html" class="list-group-item list-group-item-action">3.1. Como implementarlo</a>
+                    <a href="/HTML/containers.html" class="list-group-item list-group-item-action">3.2. Containers</a>
+                    <a href="/HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema de Grid</a>
+                    <a href="/HTML/componentes.html" class="list-group-item list-group-item-action">3.4. Componentes</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+            <div class="collapse" id="collapseJS">
+                <div class="list-group">
+                    <a href="/HTML/codigodelcliente.html" class="list-group-item list-group-item-action">4.1. Código lado del cliente y servidor</a>
+                    <a href="/HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2. Como usar JavaScript</a>
+                    <a href="/HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3. Variables</a>
+                    <a href="/HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos de datos</a>
+                    <a href="/HTML/mathjs.html" class="list-group-item list-group-item-action">4.5. Operaciones matemáticas</a>
+                    <a href="/HTML/condicionalesjs.html" class="list-group-item list-group-item-action">4.6. Condicionales</a>
+                    <a href="/HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7. Funciones</a>
+                    <a href="/HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                    <a href="/HTML/manipulaciondom.html" class="list-group-item list-group-item-action">4.9. Manipulación de DOM</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5. jQuery</button>
+            <div class="collapse" id="collapsejQuery">
+                <div class="list-group">
+                    <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1. Filosofía de jQuery</a>
+                    <a href="/HTML/selectoresjquery.html" class="list-group-item list-group-item-action">5.2. Selectores</a>
+                    <a href="/HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3. Atributos y clases</a>
+                    <a href="/HTML/traversing.html" class="list-group-item list-group-item-action">5.4. Traversing</a>
+                    <a href="/HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5. Manejo de eventos</a>
+                    <a href="/HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+            <div class="collapse" id="collapseGIT">
+                <div class="list-group">
+                    <a href="/HTML/" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                    <a href="/HTML/caracteristicasgit.html" class="list-group-item list-group-item-action">6.2. Características</a>
+                    <a href="/HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3. Ventajas</a>
+                    <a href="/HTML/gitazure.html" class="list-group-item list-group-item-action">6.4. GitHub / Azure Repos</a>
+                    <a href="/HTML/terminologiagit.html" class="list-group-item list-group-item-action">6.5. Terminología</a>
+                    <a href="/HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6. Comandos</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+            <div class="collapse" id="collapseSQL">
+                <div class="list-group">
+                    <a href="/HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1. Bases de datos SQL y no SQL</a>
+                    <a href="/HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                    <a href="/HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                    <a href="/HTML/relaciones.html" class="list-group-item list-group-item-action">7.4. Relaciones 1-1, 1-n, n-n</a>
+                    <a href="/HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK, Identity, restricciones</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+            <div class="collapse" id="collapseNET">
+                <div class="list-group">
+                    <a href="/HTML/generarproyectonet.html" class="list-group-item list-group-item-action">8.1. Generar un proyecto de Página web</a>
+                    <a href="/HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2. Estructura de un proyecto de .NET Core</a>
+                    <a href="/HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                    <a href="/HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                    <a href="/HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5. Migraciones</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </main>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

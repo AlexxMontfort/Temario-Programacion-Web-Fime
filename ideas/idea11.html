@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broma de Formulario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Formulario de Broma</h1>
+        
+        <!-- Formulario de Número de Teléfono -->
+        <div class="form-group">
+            <label for="numberSelect">Selecciona tu número de teléfono:</label>
+            <select id="numberSelect" class="form-control" onchange="checkNumber()">
+                <option value="">Selecciona un número</option>
+                <!-- Generar números de 1 a 10000 -->
+                <script>
+                    for (let i = 1; i <= 10000; i++) {
+                        document.write('<option value="' + i + '">' + i + '</option>');
+                    }
+                </script>
+            </select>
+        </div>
+        
+        <!-- Formulario de País -->
+        <div class="form-group mt-5">
+            <label for="flagCanvas">Dibuja tu bandera (México):</label>
+            <div class="mb-2">
+                <button class="btn btn-success" onclick="setColor('green')">Verde</button>
+                <button class="btn btn-light" onclick="setColor('white')">Blanco</button>
+                <button class="btn btn-danger" onclick="setColor('red')">Rojo</button>
+                <button class="btn btn-dark" onclick="setColor('black')">Negro</button>
+            </div>
+            <canvas id="flagCanvas" width="400" height="300" class="border"></canvas>
+            <div class="mt-2">
+                <button class="btn btn-primary" onclick="clearCanvas()">Limpiar</button>
+                <button class="btn btn-success" onclick="submitForm()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../app/idea11.js"></script>
+</body>
+</html>

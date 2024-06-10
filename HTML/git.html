@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Versiones con Git</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Control de Versiones con Git</h1>
+    </header>
+    <main class="container mt-5">
+        <section class="mb-5">
+            <h2>Introducción a Git</h2>
+            <p>Git es un sistema de control de versiones distribuido que permite a múltiples desarrolladores trabajar en
+                un proyecto de manera simultánea y eficiente. Proporciona herramientas para rastrear cambios, colaborar
+                en el código y mantener un historial completo de todas las modificaciones realizadas en el proyecto.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2>Conceptos Básicos de Git</h2>
+            <ul>
+                <li><strong>Repositorio (Repository):</strong> Un directorio que contiene el historial completo de los
+                    archivos de un proyecto, incluyendo todas sus versiones y cambios.</li>
+                <li><strong>Commit:</strong> Un registro de cambios que se ha realizado en el repositorio. Cada commit
+                    tiene un identificador único y puede incluir un mensaje descriptivo.</li>
+                <li><strong>Branch (Rama):</strong> Una línea de desarrollo independiente. Permite trabajar en
+                    diferentes características o correcciones de errores sin afectar la rama principal.</li>
+                <li><strong>Merge:</strong> La acción de combinar cambios de diferentes ramas en una sola rama.</li>
+                <li><strong>Clone:</strong> Una copia de un repositorio que se descarga desde un servidor remoto a una
+                    máquina local.</li>
+                <li><strong>Push:</strong> La acción de enviar commits desde el repositorio local a un repositorio
+                    remoto.</li>
+                <li><strong>Pull:</strong> La acción de actualizar el repositorio local con los cambios realizados en el
+                    repositorio remoto.</li>
+                <li><strong>Staging Area:</strong> Una área temporal donde se colocan los cambios que se desean incluir
+                    en el próximo commit.</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h2>Comandos Básicos de Git</h2>
+
+            <h3>Inicializar un Repositorio</h3>
+            <p>Para crear un nuevo repositorio, usa el comando <code>git init</code> en el directorio del proyecto.</p>
+            <div class="code-block">
+                <pre><code>git init</code></pre>
+            </div>
+
+            <h3>Clonar un Repositorio</h3>
+            <p>Para clonar un repositorio existente desde un servidor remoto, usa el comando <code>git clone</code>
+                seguido de la URL del repositorio.</p>
+            <div class="code-block">
+                <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+            </div>
+
+            <h3>Agregar Cambios</h3>
+            <p>Para agregar archivos al staging area, usa el comando <code>git add</code>.</p>
+            <div class="code-block">
+                <pre><code>git add nombre_del_archivo
+# Para agregar todos los archivos cambiados
+git add .</code></pre>
+            </div>
+
+            <h3>Crear un Commit</h3>
+            <p>Para crear un commit con los cambios agregados al staging area, usa el comando <code>git commit</code>.
+            </p>
+            <div class="code-block">
+                <pre><code>git commit -m "Descripción de los cambios"</code></pre>
+            </div>
+
+            <h3>Ver el Historial de Commits</h3>
+            <p>Para ver el historial de commits, usa el comando <code>git log</code>.</p>
+            <div class="code-block">
+                <pre><code>git log</code></pre>
+            </div>
+
+            <h3>Crear y Cambiar Ramas</h3>
+            <p>Para crear una nueva rama, usa el comando <code>git branch</code>.</p>
+            <div class="code-block">
+                <pre><code>git branch nombre_de_la_rama</code></pre>
+            </div>
+            <p>Para cambiar a una rama existente, usa el comando <code>git checkout</code>.</p>
+            <div class="code-block">
+                <pre><code>git checkout nombre_de_la_rama</code></pre>
+            </div>
+            <p>O para crear y cambiar a una nueva rama al mismo tiempo:</p>
+            <div class="code-block">
+                <pre><code>git checkout -b nombre_de_la_rama</code></pre>
+            </div>
+
+            <h3>Fusionar Ramas</h3>
+            <p>Para fusionar una rama en la rama actual, usa el comando <code>git merge</code>.</p>
+            <div class="code-block">
+                <pre><code>git merge nombre_de_la_rama</code></pre>
+            </div>
+
+            <h3>Enviar Cambios a un Repositorio Remoto</h3>
+            <p>Para enviar los commits locales a un repositorio remoto, usa el comando <code>git push</code>.</p>
+            <div class="code-block">
+                <pre><code>git push origen nombre_de_la_rama</code></pre>
+            </div>
+
+            <h3>Actualizar el Repositorio Local</h3>
+            <p>Para actualizar el repositorio local con los cambios del repositorio remoto, usa el comando
+                <code>git pull</code>.</p>
+            <div class="code-block">
+                <pre><code>git pull origen nombre_de
+                    </code></pre>
+            </div>
+        </section>
+
+        <!-- Temario Aside -->
+        <aside class="temario-aside">
+            <h3 class="temario-title text-center">Temario</h3>
+            <div class="list-group">
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+                <div class="collapse" id="collapseHTML">
+                    <div class="list-group">
+                        <a href="/HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                        <a href="/HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML
+                            semántico</a>
+                        <a href="/HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de
+                            desarrollo</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+                <div class="collapse" id="collapseCSS">
+                    <div class="list-group">
+                        <a href="/HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1.
+                            Selectores CSS</a>
+                        <a href="/HTML/variablescss.html" class="list-group-item list-group-item-action">2.2.
+                            Variables</a>
+                        <a href="/HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3.
+                    Bootstrap</button>
+                <div class="collapse" id="collapseBootstrap">
+                    <div class="list-group">
+                        <a href="/HTML/BootstrapImplementar.html" class="list-group-item list-group-item-action">3.1.
+                            Como implementarlo</a>
+                        <a href="/HTML/containers.html" class="list-group-item list-group-item-action">3.2.
+                            Containers</a>
+                        <a href="/HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema de
+                            Grid</a>
+                        <a href="/HTML/componentes.html" class="list-group-item list-group-item-action">3.4.
+                            Componentes</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+                <div class="collapse" id="collapseJS">
+                    <div class="list-group">
+                        <a href="/HTML/codigodelcliente.html" class="list-group-item list-group-item-action">4.1. Código
+                            lado del cliente y servidor</a>
+                        <a href="/HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2. Como
+                            usar JavaScript</a>
+                        <a href="/HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3.
+                            Variables</a>
+                        <a href="/HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos de
+                            datos</a>
+                        <a href="/HTML/mathjs.html" class="list-group-item list-group-item-action">4.5. Operaciones
+                            matemáticas</a>
+                        <a href="/HTML/condicionalesjs.html" class="list-group-item list-group-item-action">4.6.
+                            Condicionales</a>
+                        <a href="/HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7.
+                            Funciones</a>
+                        <a href="/HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                        <a href="/HTML/manipulaciondom.html" class="list-group-item list-group-item-action">4.9.
+                            Manipulación de DOM</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5.
+                    jQuery</button>
+                <div class="collapse" id="collapsejQuery">
+                    <div class="list-group">
+                        <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1.
+                            Filosofía de jQuery</a>
+                        <a href="/HTML/selectoresjquery.html" class="list-group-item list-group-item-action">5.2.
+                            Selectores</a>
+                        <a href="/HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3. Atributos
+                            y clases</a>
+                        <a href="/HTML/traversing.html" class="list-group-item list-group-item-action">5.4.
+                            Traversing</a>
+                        <a href="/HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5. Manejo de
+                            eventos</a>
+                        <a href="/HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+                <div class="collapse" id="collapseGIT">
+                    <div class="list-group">
+                        <a href="/HTML/" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                        <a href="/HTML/caracteristicasgit.html" class="list-group-item list-group-item-action">6.2.
+                            Características</a>
+                        <a href="/HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3.
+                            Ventajas</a>
+                        <a href="/HTML/gitazure.html" class="list-group-item list-group-item-action">6.4. GitHub / Azure
+                            Repos</a>
+                        <a href="/HTML/terminologiagit.html" class="list-group-item list-group-item-action">6.5.
+                            Terminología</a>
+                        <a href="/HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6.
+                            Comandos</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+                <div class="collapse" id="collapseSQL">
+                    <div class="list-group">
+                        <a href="/HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1. Bases de
+                            datos SQL y no SQL</a>
+                        <a href="/HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                        <a href="/HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                        <a href="/HTML/relaciones.html" class="list-group-item list-group-item-action">7.4. Relaciones
+                            1-1, 1-n, n-n</a>
+                        <a href="/HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK, Identity,
+                            restricciones</a>
+                    </div>
+                </div>
+
+                <button class="list-group-item list-group-item-action section-title" data-toggle="collapse"
+                    data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+                <div class="collapse" id="collapseNET">
+                    <div class="list-group">
+                        <a href="/HTML/generarproyectonet.html" class="list-group-item list-group-item-action">8.1.
+                            Generar un proyecto de Página web</a>
+                        <a href="/HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2.
+                            Estructura de un proyecto de .NET Core</a>
+                        <a href="/HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                        <a href="/HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                        <a href="/HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5.
+                            Migraciones</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>

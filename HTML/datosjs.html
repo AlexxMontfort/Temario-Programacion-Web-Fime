@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Datos en JavaScript</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Tipos de Datos en JavaScript</h1>
+    </header>
+    <main class="container mt-5">
+        <section class="mb-5">
+            <h2>Tipos de Datos Primitivos</h2>
+            <p>JavaScript tiene varios tipos de datos primitivos:</p>
+            <ul>
+                <li><strong>Número (`Number`)</strong></li>
+                <li><strong>Cadena de Texto (`String`)</strong></li>
+                <li><strong>Booleano (`Boolean`)</strong></li>
+                <li><strong>Indefinido (`Undefined`)</strong></li>
+                <li><strong>Nulo (`Null`)</strong></li>
+                <li><strong>Símbolo (`Symbol`)</strong></li>
+                <li><strong>BigInt (`BigInt`)</strong></li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h3>Número (`Number`)</h3>
+            <div class="code-block">
+                <pre><code>let entero = 42;
+let decimal = 3.14;</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Cadena de Texto (`String`)</h3>
+            <div class="code-block">
+                <pre><code>let cadena1 = "Hola, Mundo!";
+let cadena2 = 'JavaScript es genial';
+let cadena3 = `Esto es una cadena con comillas invertidas`;</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Booleano (`Boolean`)</h3>
+            <div class="code-block">
+                <pre><code>let verdadero = true;
+let falso = false;</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Indefinido (`Undefined`)</h3>
+            <div class="code-block">
+                <pre><code>let indefinido;
+console.log(indefinido); // Imprime: undefined</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Nulo (`Null`)</h3>
+            <div class="code-block">
+                <pre><code>let nulo = null;</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Símbolo (`Symbol`)</h3>
+            <div class="code-block">
+                <pre><code>let simbolo1 = Symbol('descripcion');
+let simbolo2 = Symbol('descripcion');
+console.log(simbolo1 === simbolo2); // Imprime: false</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>BigInt (`BigInt`)</h3>
+            <div class="code-block">
+                <pre><code>let numeroGrande = BigInt(1234567890123456789012345678901234567890);</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Tipos de Datos de Objeto</h2>
+            <p>JavaScript también tiene tipos de datos más complejos llamados objetos:</p>
+            <ul>
+                <li><strong>Objeto (`Object`)</strong></li>
+                <li><strong>Arreglo (`Array`)</strong></li>
+                <li><strong>Fecha (`Date`)</strong></li>
+                <li><strong>Expresión Regular (`RegExp`)</strong></li>
+                <li><strong>Función (`Function`)</strong></li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <h3>Objeto (`Object`)</h3>
+            <div class="code-block">
+                <pre><code>let persona = {
+    nombre: "Juan",
+    edad: 30,
+    saludar: function() {
+        console.log("Hola, me llamo " + this.nombre);
+    }
+};</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Arreglo (`Array`)</h3>
+            <div class="code-block">
+                <pre><code>let numeros = [1, 2, 3, 4, 5];
+let mezclado = [1, 'dos', true, { clave: 'valor' }, [6, 7, 8]];</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Fecha (`Date`)</h3>
+            <div class="code-block">
+                <pre><code>let fechaActual = new Date();
+console.log(fechaActual);</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Expresión Regular (`RegExp`)</h3>
+            <div class="code-block">
+                <pre><code>let expresion = /hola/;
+let cadena = "hola mundo";
+console.log(expresion.test(cadena)); // Imprime: true</code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3>Función (`Function`)</h3>
+            <div class="code-block">
+                <pre><code>function saludar(nombre) {
+    return "Hola, " + nombre;
+}
+
+console.log(saludar("Mundo")); // Imprime: Hola, Mundo</code></pre>
+            </div>
+        </section>
+        <!-- Temario Aside -->
+    <aside class="temario-aside">
+        <h3 class="temario-title text-center">Temario</h3>
+        <div class="list-group">
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+            <div class="collapse" id="collapseHTML">
+                <div class="list-group">
+                    <a href="/HTML/etiquetas.html" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                    <a href="/HTML/semantica.html" class="list-group-item list-group-item-action">1.2. HTML semántico</a>
+                    <a href="/HTML/IDES.html" class="list-group-item list-group-item-action">1.3. IDE de desarrollo</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+            <div class="collapse" id="collapseCSS">
+                <div class="list-group">
+                    <a href="/HTML/Selectorescss.html" class="list-group-item list-group-item-action">2.1. Selectores CSS</a>
+                    <a href="/HTML/variablescss.html" class="list-group-item list-group-item-action">2.2. Variables</a>
+                    <a href="/HTML/" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3. Bootstrap</button>
+            <div class="collapse" id="collapseBootstrap">
+                <div class="list-group">
+                    <a href="/HTML/BootstrapImplementar.html" class="list-group-item list-group-item-action">3.1. Como implementarlo</a>
+                    <a href="/HTML/containers.html" class="list-group-item list-group-item-action">3.2. Containers</a>
+                    <a href="/HTML/Grid.html" class="list-group-item list-group-item-action">3.3. Sistema de Grid</a>
+                    <a href="/HTML/componentes.html" class="list-group-item list-group-item-action">3.4. Componentes</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+            <div class="collapse" id="collapseJS">
+                <div class="list-group">
+                    <a href="/HTML/codigodelcliente.html" class="list-group-item list-group-item-action">4.1. Código lado del cliente y servidor</a>
+                    <a href="/HTML/usarjavascript.html" class="list-group-item list-group-item-action">4.2. Como usar JavaScript</a>
+                    <a href="/HTML/variablesjs.html" class="list-group-item list-group-item-action">4.3. Variables</a>
+                    <a href="/HTML/datosjs.html" class="list-group-item list-group-item-action">4.4. Tipos de datos</a>
+                    <a href="/HTML/mathjs.html" class="list-group-item list-group-item-action">4.5. Operaciones matemáticas</a>
+                    <a href="/HTML/condicionalesjs.html" class="list-group-item list-group-item-action">4.6. Condicionales</a>
+                    <a href="/HTML/funcionesjs.html" class="list-group-item list-group-item-action">4.7. Funciones</a>
+                    <a href="/HTML/buclesjs.html" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                    <a href="/HTML/manipulaciondom.html" class="list-group-item list-group-item-action">4.9. Manipulación de DOM</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5. jQuery</button>
+            <div class="collapse" id="collapsejQuery">
+                <div class="list-group">
+                    <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1. Filosofía de jQuery</a>
+                    <a href="/HTML/selectoresjquery.html" class="list-group-item list-group-item-action">5.2. Selectores</a>
+                    <a href="/HTML/clasesjquery.html" class="list-group-item list-group-item-action">5.3. Atributos y clases</a>
+                    <a href="/HTML/traversing.html" class="list-group-item list-group-item-action">5.4. Traversing</a>
+                    <a href="/HTML/eventosjquery.html" class="list-group-item list-group-item-action">5.5. Manejo de eventos</a>
+                    <a href="/HTML/ajax.html" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+            <div class="collapse" id="collapseGIT">
+                <div class="list-group">
+                    <a href="/HTML/" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                    <a href="/HTML/caracteristicasgit.html" class="list-group-item list-group-item-action">6.2. Características</a>
+                    <a href="/HTML/ventajasgit.html" class="list-group-item list-group-item-action">6.3. Ventajas</a>
+                    <a href="/HTML/gitazure.html" class="list-group-item list-group-item-action">6.4. GitHub / Azure Repos</a>
+                    <a href="/HTML/terminologiagit.html" class="list-group-item list-group-item-action">6.5. Terminología</a>
+                    <a href="/HTML/comandosgit.html" class="list-group-item list-group-item-action">6.6. Comandos</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+            <div class="collapse" id="collapseSQL">
+                <div class="list-group">
+                    <a href="/HTML/basesdedatos.html" class="list-group-item list-group-item-action">7.1. Bases de datos SQL y no SQL</a>
+                    <a href="/HTML/dml.html" class="list-group-item list-group-item-action">7.2. DML</a>
+                    <a href="/HTML/ddl.html" class="list-group-item list-group-item-action">7.3. DDL</a>
+                    <a href="/HTML/relaciones.html" class="list-group-item list-group-item-action">7.4. Relaciones 1-1, 1-n, n-n</a>
+                    <a href="/HTML/pkfk.html" class="list-group-item list-group-item-action">7.5. PK, FK, Identity, restricciones</a>
+                </div>
+            </div>
+
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+            <div class="collapse" id="collapseNET">
+                <div class="list-group">
+                    <a href="/HTML/generarproyectonet.html" class="list-group-item list-group-item-action">8.1. Generar un proyecto de Página web</a>
+                    <a href="/HTML/estructuranet.html" class="list-group-item list-group-item-action">8.2. Estructura de un proyecto de .NET Core</a>
+                    <a href="/HTML/layoutnet.html" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                    <a href="/HTML/mvcnet.html" class="list-group-item list-group-item-action">8.4. MVC</a>
+                    <a href="/HTML/migracionesnet.html" class="list-group-item list-group-item-action">8.5. Migraciones</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </main>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

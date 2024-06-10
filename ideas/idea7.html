@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro Abierto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/idea7.css">
+</head>
+<body>
+    <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+        <div class="book">
+            <div class="page left">
+                <h2 class="text-center">Temario</h2>
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="updateContent('HTML')">1. HTML</li>
+                    <li class="list-group-item" onclick="updateContent('CSS')">2. CSS</li>
+                    <li class="list-group-item" onclick="updateContent('Bootstrap')">3. Bootstrap</li>
+                    <li class="list-group-item" onclick="updateContent('JavaScript')">4. JavaScript</li>
+                    <li class="list-group-item" onclick="updateContent('jQuery')">5. jQuery</li>
+                    <li class="list-group-item" onclick="updateContent('GIT')">6. GIT</li>
+                    <li class="list-group-item" onclick="updateContent('SQL Server')">7. SQL Server</li>
+                    <li class="list-group-item" onclick="updateContent('.NET Core')">8. .NET Core</li>
+                </ul>
+            </div>
+            <div class="page right">
+                <h2 class="text-center">Contenido</h2>
+                <p id="content">La idea es que esto es un libro!</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../app/idea7.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.left-section {
+    background-color: #fff;
+}
+
+.right-section {
+    background-color: #f8f9fa;
+}
+
+.topic-card {
+    background-color: #17a2b8;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.topic-card:hover {
+    background-color: #138496;
+}
+
+.content-display p {
+    font-size: 1.25rem;
+    color: #333;
+}

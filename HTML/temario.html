@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .section-title {
+            color: #6c757d;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Temario</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Más Preguntas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Temario -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Temario</h1>
+        <div class="list-group">
+            <!-- HTML Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseHTML" aria-expanded="false" aria-controls="collapseHTML">1. HTML</button>
+            <div class="collapse" id="collapseHTML">
+                <div class="list-group">
+                    <a href="pagina_html.html#etiquetas" class="list-group-item list-group-item-action">1.1. Etiquetas</a>
+                    <a href="pagina_html.html#html-semantico" class="list-group-item list-group-item-action">1.2. HTML semántico</a>
+                    <a href="pagina_html.html#ide" class="list-group-item list-group-item-action">1.3. IDE de desarrollo</a>
+                </div>
+            </div>
+
+            <!-- CSS Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseCSS" aria-expanded="false" aria-controls="collapseCSS">2. CSS</button>
+            <div class="collapse" id="collapseCSS">
+                <div class="list-group">
+                    <a href="pagina_css.html#selectores" class="list-group-item list-group-item-action">2.1. Selectores CSS</a>
+                    <a href="pagina_css.html#variables" class="list-group-item list-group-item-action">2.2. Variables</a>
+                    <a href="pagina_css.html#modelo-caja" class="list-group-item list-group-item-action">2.3. Modelo de la caja</a>
+                </div>
+            </div>
+
+            <!-- Bootstrap Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseBootstrap" aria-expanded="false" aria-controls="collapseBootstrap">3. Bootstrap</button>
+            <div class="collapse" id="collapseBootstrap">
+                <div class="list-group">
+                    <a href="pagina_bootstrap.html#como-implementarlo" class="list-group-item list-group-item-action">3.1. Cómo implementarlo</a>
+                    <a href="pagina_bootstrap.html#containers" class="list-group-item list-group-item-action">3.2. Containers</a>
+                    <a href="pagina_bootstrap.html#sistema-grid" class="list-group-item list-group-item-action">3.3. Sistema de Grid</a>
+                    <a href="pagina_bootstrap.html#componentes" class="list-group-item list-group-item-action">3.4. Componentes</a>
+                </div>
+            </div>
+
+            <!-- JavaScript Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseJS" aria-expanded="false" aria-controls="collapseJS">4. JavaScript</button>
+            <div class="collapse" id="collapseJS">
+                <div class="list-group">
+                    <a href="pagina_js.html#codigo-cliente-servidor" class="list-group-item list-group-item-action">4.1. Código lado del cliente y servidor</a>
+                    <a href="pagina_js.html#como-usar" class="list-group-item list-group-item-action">4.2. Cómo usar JavaScript</a>
+                    <a href="pagina_js.html#variables" class="list-group-item list-group-item-action">4.3. Variables</a>
+                    <a href="pagina_js.html#tipos-datos" class="list-group-item list-group-item-action">4.4. Tipos de datos</a>
+                    <a href="pagina_js.html#operaciones-matematicas" class="list-group-item list-group-item-action">4.5. Operaciones matemáticas</a>
+                    <a href="pagina_js.html#condicionales" class="list-group-item list-group-item-action">4.6. Condicionales</a>
+                    <a href="pagina_js.html#funciones" class="list-group-item list-group-item-action">4.7. Funciones</a>
+                    <a href="pagina_js.html#bucles" class="list-group-item list-group-item-action">4.8. Bucles</a>
+                    <a href="pagina_js.html#manipulacion-dom" class="list-group-item list-group-item-action">4.9. Manipulación de DOM</a>
+                </div>
+            </div>
+
+            <!-- jQuery Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapsejQuery" aria-expanded="false" aria-controls="collapsejQuery">5. jQuery</button>
+            <div class="collapse" id="collapsejQuery">
+                <div class="list-group">
+                    <a href="pagina_jquery.html#filosofia" class="list-group-item list-group-item-action">5.1. Filosofía de jQuery</a>
+                    <a href="pagina_jquery.html#selectores" class="list-group-item list-group-item-action">5.2. Selectores</a>
+                    <a href="pagina_jquery.html#atributos-clases" class="list-group-item list-group-item-action">5.3. Atributos y clases</a>
+                    <a href="pagina_jquery.html#traversing" class="list-group-item list-group-item-action">5.4. Traversing</a>
+                    <a href="pagina_jquery.html#manejo-eventos" class="list-group-item list-group-item-action">5.5. Manejo de eventos</a>
+                    <a href="pagina_jquery.html#ajax" class="list-group-item list-group-item-action">5.6. AJAX</a>
+                </div>
+            </div>
+
+            <!-- GIT Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseGIT" aria-expanded="false" aria-controls="collapseGIT">6. GIT</button>
+            <div class="collapse" id="collapseGIT">
+                <div class="list-group">
+                    <a href="pagina_git.html#control-versiones" class="list-group-item list-group-item-action">6.1. Control de versiones</a>
+                    <a href="pagina_git.html#caracteristicas" class="list-group-item list-group-item-action">6.2. Características</a>
+                    <a href="pagina_git.html#ventajas" class="list-group-item list-group-item-action">6.3. Ventajas</a>
+                    <a href="pagina_git.html#github-azure" class="list-group-item list-group-item-action">6.4. GitHub / Azure Repos</a>
+                    <a href="pagina_git.html#terminologia" class="list-group-item list-group-item-action">6.5. Terminología</a>
+                    <a href="pagina_git.html#comandos" class="list-group-item list-group-item-action">6.6. Comandos</a>
+                </div>
+            </div>
+
+            <!-- SQL Server Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseSQL" aria-expanded="false" aria-controls="collapseSQL">7. SQL Server</button>
+            <div class="collapse" id="collapseSQL">
+                <div class="list-group">
+                    <a href="pagina_sql.html#bases-datos" class="list-group-item list-group-item-action">7.1. Bases de datos SQL y no SQL</a>
+                    <a href="pagina_sql.html#dml" class="list-group-item list-group-item-action">7.2. DML</a>
+                    <a href="pagina_sql.html#ddl" class="list-group-item list-group-item-action">7.3. DDL</a>
+                    <a href="pagina_sql.html#relaciones" class="list-group-item list-group-item-action">7.4. Relaciones 1-1, 1-n, n-n</a>
+                    <a href="pagina_sql.html#pk-fk" class="list-group-item list-group-item-action">7.5. PK, FK, Identity, restricciones</a>
+                </div>
+            </div>
+
+            <!-- .NET Core Section -->
+            <button class="list-group-item list-group-item-action section-title" data-toggle="collapse" data-target="#collapseNET" aria-expanded="false" aria-controls="collapseNET">8. .NET Core</button>
+            <div class="collapse" id="collapseNET">
+                <div class="list-group">
+                    <a href="pagina_net.html#generar-proyecto" class="list-group-item list-group-item-action">8.1. Generar un proyecto de Página web</a>
+                    <a href="pagina_net.html#estructura-proyecto" class="list-group-item list-group-item-action">8.2. Estructura de un proyecto de .NET Core</a>
+                    <a href="pagina_net.html#layouts" class="list-group-item list-group-item-action">8.3. Layouts</a>
+                    <a href="pagina_net.html#mvc" class="list-group-item list-group-item-action">8.4. MVC</a>
+                    <a href="pagina_net.html#migraciones" class="list-group-item list-group-item-action">8.5. Migraciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
